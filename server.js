@@ -3,7 +3,7 @@
  * @Version: 4.0.0
  * @Date: 2021-07-06 11:39:38
  * @LastEditors: Yangyawen
- * @LastEditTime: 2021-07-08 14:37:06
+ * @LastEditTime: 2021-07-08 17:52:40
  */
 const koa = require('koa');
 const axios = require('axios');
@@ -62,6 +62,6 @@ router.get('/demo/login', async(ctx, next) => {
 })
 
 app.use(router.routes())
-    .listen(8080, ()=>{
-        console.log('server is running in 8080');
+    .listen(9013, ()=>{
+        console.log('server is running in 9013');
     });
