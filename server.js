@@ -3,7 +3,7 @@
  * @Version: 4.0.0
  * @Date: 2021-07-06 11:39:38
  * @LastEditors: Yangyawen
- * @LastEditTime: 2021-07-08 17:52:40
+ * @LastEditTime: 2021-09-23 17:12:55
  */
 const koa = require('koa');
 const axios = require('axios');
@@ -21,7 +21,8 @@ const keyMap = {
     '7e111794121d87ca0959954f89580e1a': '5dcbe6cb44549d3be1a48cbf18dd7bde',
     '26e13e2fddb82988f10eee81be1a6342': '1a561f45b461b0382ac3c3f145031600',
     '2e3cdd87ca5b729409e38bc17173702c': '91d63df6815d2c06ed6d49aec3bba357',
-    '83ee748676c09d077c5c83e3b8a08e32': '0e01c8fd731b8400b1c889bdcca3acdb'
+    '83ee748676c09d077c5c83e3b8a08e32': '0e01c8fd731b8400b1c889bdcca3acdb',
+    '473094de7ef952afdd6df09540f1953b': '256de360c8350f1e804495190a177d08'
 };
 
 app.use(async(ctx, next)=>{
