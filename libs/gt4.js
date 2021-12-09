@@ -1,4 +1,4 @@
-"v4.0.6 Geetest Inc.";
+"v4.1.0 Geetest Inc.";
 
 (function (window) {
     "use strict";
@@ -49,13 +49,13 @@ function Config(config) {
 }
 
 Config.prototype = {
-    apiServers: ['gcaptcha4.geetest.com'],
-    staticServers: ["static.geetest.com", "dn-staticdown.qbox.me"],
+    apiServers: ['gcaptcha4.geetest.com','gcaptcha4.geevisit.com'],
+    staticServers: ["static.geetest.com",'static.geevisit.com', "dn-staticdown.qbox.me"],
     protocol: 'http://',
     typePath: '/load',
     fallback_config: {
         bypass: {
-            staticServers: ["static.geetest.com/", "dn-staticdown.qbox.me/"],
+            staticServers: ["static.geetest.com",'static.geevisit.com', "dn-staticdown.qbox.me"],
             type: 'bypass',
             bypass: '/v4/bypass.js'
         }
@@ -91,7 +91,6 @@ var isFunction = function (value) {
     return (typeof value === 'function');
 };
 var MOBILE = /Mobi/i.test(navigator.userAgent);
-var pt = MOBILE ? 3 : 0;
 
 var callbacks = {};
 var status = {};
@@ -309,9 +308,10 @@ var jsonp = function (domains, path, config, callback) {
     load(config, config.protocol, domains, path, {
         captcha_id: config.captchaId,
         challenge: config.challenge || uuid(),
-        client_type: 0,
-        pt: 0,
-        risk_type: config.riskType
+        client_type: MOBILE? 'h5':'web',
+        risk_type: config.riskType,
+        call_type: config.callType,
+        lang: config.language? config.language : navigator.appName === 'Netscape' ? navigator.language.toLowerCase() : navigator.userLanguage.toLowerCase()
     }, function (err) {
         // 网络问题接口没有返回，直接使用本地验证码，走宕机模式
         // 这里可以添加用户的逻辑
@@ -332,7 +332,6 @@ var reportError = function (config, url) {
         time: Date.now().getTime(),
         captcha_id: config.gt,
         challenge: config.challenge,
-        pt: pt,
         exception_url: url,
         error_code: config.error_code
     }, function (err) {})
@@ -375,7 +374,6 @@ window.initGeetest4 = function (userConfig,callback) {
     if (isObject(userConfig.getType)) {
         config._extend(userConfig.getType);
     }
-
 
     jsonp(config.apiServers , config.typePath, config, function (newConfig) {
             

@@ -2,8 +2,8 @@
  * @Description: 无感探针模式
  * @Version: 4.0.0
  * @Date: 2021-09-23 17:10:12
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-09-23 17:12:24
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 10:22:40
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +88,7 @@
     <script>
         var button = $("#btn")[0];
         initGeetest4({
-            captchaId: '473094de7ef952afdd6df09540f1953b',
+            captchaId: '99b142aaece96330d0f3ffb565ffb3ef',
             product: 'bind'
         },function (captcha) {
             // captcha为验证码实例
@@ -99,7 +99,7 @@
                     if (!result) {
                         return alert('请完成验证');
                     }
-                    result.captcha_id = "473094de7ef952afdd6df09540f1953b"
+                    result.captcha_id = "99b142aaece96330d0f3ffb565ffb3ef"
                     //your code
                     $.ajax({
                         url: 'demo/login',

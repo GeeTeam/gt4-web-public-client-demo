@@ -2,8 +2,8 @@
  * @Description: 滑块的float模式
  * @Version: 4.0.0
  * @Date: 2021-07-06 09:53:51
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-07-08 14:47:18
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 09:52:33
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -93,8 +93,10 @@
     <script src="libs/gt4.js"></script>
     <script>
         initGeetest4({
-            captchaId: '7e111794121d87ca0959954f89580e1a',
-            product: 'float'
+            captchaId: '54088bb07d2df3c46b79f80300b0abbe',
+            product: 'float',
+            // riskType配合风控融合模式，如果您的id是其他模式此参数可省略
+            riskType: 'slide'
         },function (captcha) {
             // captcha为验证码实例
             captcha.appendTo("#captcha");// 调用appendTo将验证码插入到页的某一个元素中，这个元素用户可以自定义
@@ -103,7 +105,7 @@
                 if (!result) {
                     return alert('请完成验证');
                 }
-                result.captcha_id = "7e111794121d87ca0959954f89580e1a"
+                result.captcha_id = "54088bb07d2df3c46b79f80300b0abbe"
                 //your code
                 $.ajax({
                     url: 'demo/login',

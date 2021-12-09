@@ -2,8 +2,8 @@
  * @Description: node服务
  * @Version: 4.0.0
  * @Date: 2021-07-06 11:39:38
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-09-23 17:12:55
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 10:35:54
  */
 const koa = require('koa');
 const axios = require('axios');
@@ -18,11 +18,10 @@ const router = new Router()
 app.use(staticFiles('./'))
 
 const keyMap = {
-    '7e111794121d87ca0959954f89580e1a': '5dcbe6cb44549d3be1a48cbf18dd7bde',
-    '26e13e2fddb82988f10eee81be1a6342': '1a561f45b461b0382ac3c3f145031600',
-    '2e3cdd87ca5b729409e38bc17173702c': '91d63df6815d2c06ed6d49aec3bba357',
-    '83ee748676c09d077c5c83e3b8a08e32': '0e01c8fd731b8400b1c889bdcca3acdb',
-    '473094de7ef952afdd6df09540f1953b': '256de360c8350f1e804495190a177d08'
+    '54088bb07d2df3c46b79f80300b0abbe': 'd23bf3f2507ec46e6abd6aadc4e320bb',
+    '6370a348ba8bddd565b19cb9aea370de': '70e8826d6d9cac49dc6f2536f701c0c6',
+    '99b142aaece96330d0f3ffb565ffb3ef': '6107efae4ed9e4228403c6625c8e2511',
+    '552d008a5b9816121503c69c9a133ce3': '552d008a5b9816121503c69c9a133ce3'
 };
 
 app.use(async(ctx, next)=>{

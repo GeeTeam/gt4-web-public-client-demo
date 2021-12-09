@@ -1,18 +1,17 @@
 <!--
- * @Description: 九宫格demo
+ * @Description: 语音验证
  * @Version: 4.0.0
- * @Date: 2021-07-06 18:37:30
+ * @Date: 2021-12-09 10:32:58
  * @LastEditors: Yawen Yang
- * @LastEditTime: 2021-12-09 09:55:39
+ * @LastEditTime: 2021-12-09 10:35:33
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>popup模式</title>
+    <title>float模式</title>
     <style>
         body {
             margin: 50px 0;
@@ -68,7 +67,7 @@
 </head>
 <body>
     <h2><a href="./">返回</a></h2>
-    <h2>九宫格</h2>
+    <h2>滑动模式-float</h2>
     <form id="form">
         <div>
             <label for="username">用户名：</label>
@@ -94,10 +93,8 @@
     <script src="libs/gt4.js"></script>
     <script>
         initGeetest4({
-            captchaId: '54088bb07d2df3c46b79f80300b0abbe',
-            product: 'popup',
-            // riskType配合风控融合模式，如果您的id是其他模式此参数可省略
-            riskType: 'nine'
+            captchaId: '552d008a5b9816121503c69c9a133ce3',
+            product: 'float',
         },function (captcha) {
             // captcha为验证码实例
             captcha.appendTo("#captcha");// 调用appendTo将验证码插入到页的某一个元素中，这个元素用户可以自定义
@@ -106,7 +103,7 @@
                 if (!result) {
                     return alert('请完成验证');
                 }
-                result.captcha_id = "54088bb07d2df3c46b79f80300b0abbe"
+                result.captcha_id = "552d008a5b9816121503c69c9a133ce3"
                 //your code
                 $.ajax({
                     url: 'demo/login',

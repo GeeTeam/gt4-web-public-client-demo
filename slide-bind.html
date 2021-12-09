@@ -2,8 +2,8 @@
  * @Description: slide的bind模式
  * @Version: 4.0.0
  * @Date: 2021-07-06 09:55:11
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-07-09 14:31:15
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 09:51:35
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -88,8 +88,10 @@
     <script>
         var button = $("#btn")[0];
         initGeetest4({
-            captchaId: '7e111794121d87ca0959954f89580e1a',
-            product: 'bind'
+            captchaId: '54088bb07d2df3c46b79f80300b0abbe',
+            product: 'bind',
+            // riskType配合风控融合模式，如果您的id是其他模式此参数可省略
+            riskType: 'slide'
         },function (captcha) {
             // captcha为验证码实例
             captcha.onReady(function(){
@@ -99,7 +101,7 @@
                     if (!result) {
                         return alert('请完成验证');
                     }
-                    result.captcha_id = "7e111794121d87ca0959954f89580e1a"
+                    result.captcha_id = "54088bb07d2df3c46b79f80300b0abbe"
                     //your code
                     $.ajax({
                         url: 'demo/login',

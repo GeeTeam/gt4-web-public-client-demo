@@ -2,8 +2,8 @@
  * @Description: 绘图验证
  * @Version: 4.0.0
  * @Date: 2021-07-08 15:00:32
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-07-08 15:01:15
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 10:31:56
 -->
 
 <!DOCTYPE html>
@@ -68,7 +68,7 @@
 </head>
 <body>
     <h2><a href="./">返回</a></h2>
-    <h2>五子棋</h2>
+    <h2>绘图验证</h2>
     <form id="form">
         <div>
             <label for="username">用户名：</label>
@@ -94,8 +94,9 @@
     <script src="libs/gt4.js"></script>
     <script>
         initGeetest4({
-            captchaId: '83ee748676c09d077c5c83e3b8a08e32',
+            captchaId: '54088bb07d2df3c46b79f80300b0abbe',
             product: 'popup',
+            // riskType配合风控融合模式，如果您的id是其他模式此参数可省略
             riskType: 'pencil'
         },function (captcha) {
             // captcha为验证码实例
@@ -105,7 +106,7 @@
                 if (!result) {
                     return alert('请完成验证');
                 }
-                result.captcha_id = "83ee748676c09d077c5c83e3b8a08e32"
+                result.captcha_id = "54088bb07d2df3c46b79f80300b0abbe"
                 //your code
                 $.ajax({
                     url: 'demo/login',

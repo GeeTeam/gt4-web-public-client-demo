@@ -2,8 +2,8 @@
  * @Description: 一点即过例子
  * @Version: 4.0.0
  * @Date: 2021-07-06 17:03:00
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-07-08 14:43:25
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 09:54:15
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -93,8 +93,10 @@
     <script src="libs/gt4.js"></script>
     <script>
         initGeetest4({
-            captchaId: '2e3cdd87ca5b729409e38bc17173702c',
-            product: 'float'
+            captchaId: '54088bb07d2df3c46b79f80300b0abbe',
+            product: 'float',
+            // riskType配合风控融合模式，如果您的id是其他模式此参数可省略
+            riskType: 'ai'
         },function (captcha) {
             // captcha为验证码实例
             captcha.appendTo("#captcha");// 调用appendTo将验证码插入到页的某一个元素中，这个元素用户可以自定义
@@ -103,7 +105,7 @@
                 if (!result) {
                     return alert('请完成验证');
                 }
-                result.captcha_id = "2e3cdd87ca5b729409e38bc17173702c"
+                result.captcha_id = "54088bb07d2df3c46b79f80300b0abbe"
                 //your code
                 $.ajax({
                     url: 'demo/login',

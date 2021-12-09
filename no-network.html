@@ -2,8 +2,8 @@
  * @Description: 宕机模式
  * @Version: 4.0.0
  * @Date: 2021-07-07 10:38:18
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-09-08 10:12:32
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 09:54:55
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +93,7 @@
     <script src="libs/gt4.js"></script>
     <script>
         initGeetest4({
-            captchaId: '7e111794121d87ca0959954f89580e1a',
+            captchaId: '54088bb07d2df3c46b79f80300b0abbe',
             product: 'float',
             apiServers: ['192.168.0.100']
         },function (captcha) {
@@ -104,7 +104,7 @@
                 if (!result) {
                     return alert('请完成验证');
                 }
-                result.captcha_id = "7e111794121d87ca0959954f89580e1a"
+                result.captcha_id = "54088bb07d2df3c46b79f80300b0abbe"
                 //your code
                 $.ajax({
                     url: 'demo/login',

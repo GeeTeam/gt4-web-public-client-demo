@@ -2,8 +2,8 @@
  * @Description: 消消乐
  * @Version: 4.0.0
  * @Date: 2021-07-08 15:15:50
- * @LastEditors: Yangyawen
- * @LastEditTime: 2021-07-08 15:16:19
+ * @LastEditors: Yawen Yang
+ * @LastEditTime: 2021-12-09 09:55:07
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -93,8 +93,9 @@
     <script src="libs/gt4.js"></script>
     <script>
         initGeetest4({
-            captchaId: '83ee748676c09d077c5c83e3b8a08e32',
+            captchaId: '54088bb07d2df3c46b79f80300b0abbe',
             product: 'popup',
+            // riskType配合风控融合模式，如果您的id是其他模式此参数可省略
             riskType: 'match'
         },function (captcha) {
             // captcha为验证码实例
@@ -104,7 +105,7 @@
                 if (!result) {
                     return alert('请完成验证');
                 }
-                result.captcha_id = "83ee748676c09d077c5c83e3b8a08e32"
+                result.captcha_id = "54088bb07d2df3c46b79f80300b0abbe"
                 //your code
                 $.ajax({
                     url: 'demo/login',
